@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini UI Kit</title>
+    <style>
+        *{position: relative; box-sizing: border-box;}
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: rgb(243, 240, 235);
+            background: -moz-linear-gradient(top, rgba(243, 240, 235, 1) 0%, rgba(220, 210, 202, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(243, 240, 235, 1) 0%, rgba(220, 210, 202, 1) 100%);
+            background: linear-gradient(to bottom, rgba(243, 240, 235, 1) 0%, rgba(220, 210, 202, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startClorstr='#f3foeb', endColorstr='#dcd2ca', GradientType=0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Calibri, Arial, Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .boxbtn, .button {
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            background: #e7e4de;
+            min-width: 45px;
+            min-height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px rgba(49, 34, 22, 0.3);
+            cursor: pointer;
+            font-weight: 900;
+            transition: 0.2s ease-in;
+            box-shadow: 
+                inset 0 3px 2px 0 rgba(40, 34, 22, 0.07),
+                inset 0 6px 3px 0 rgba(255, 255, 255, 0.8),
+                inset 0 -4.5px 3.5px 0 rgba(165, 145, 131, 0.75),
+                inset 0 -5px 3px -2px rgba(255, 255, 255, 0.4),
+                inset 8px 0 4px -2px rgba(255, 255, 255, 0.8),
+                inset -9px 0 3px -2px rgba(255, 255, 255, 0.5),
+                0 4px 4px -1px rgba(49, 34, 22, 0.5),
+                0 8px 6px -3px rgba(49, 34, 22, 0.3),
+                0 12px 9px -2px rgba(165, 145, 131, 0.4),
+                0 0 4px 0 rgba(49, 34, 22, 0.2);
+        }
+        .boxbtn {
+            padding: 4px;
+            background: rgb(243, 240, 235);
+            background: -moz-linear-gradient(top, rgba(243, 240, 235, 1) 0%, rgba(220, 210, 202, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(243, 240, 235, 1) 0%, rgba(220, 210, 202, 1) 100%);
+            background: linear-gradient(to bottom, rgba(243, 240, 235, 1) 0%, rgba(220, 210, 202, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startClorstr='#f3foeb', endColorstr='#dcd2ca', GradientType=0);
+            border-radius: 16px;
+            opacity: 0.9;
+            border: solid 1px rgba(255, 255, 255, 0.45);
+            box-shadow: 0 -10px 10px -8px rgba(255, 255, 255, 0.9);
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxbtn">
+        <div class="button">
+            <span>like</span>
+        </div>
+    </div>
+</body>
+</html>

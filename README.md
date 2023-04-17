@@ -1,1 +1,1 @@
-# on_off_css
+Mini Ui Kit - кнопки On Off в Html и Css
