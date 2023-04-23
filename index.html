@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
         }
+
         body {
             background: rgb(243, 240, 235);
             background: -moz-linear-gradient(top, rgba(243, 240, 235, 1) 0%, rgba(220, 210, 202, 1) 100%);
@@ -23,13 +24,16 @@
             justify-content: center;
             font-family: Calibri, Arial, Verdana, Geneva, Tahoma, sans-serif;
         }
+
         .boxbtn, .button {
             border-radius: 12px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .button {
+
+        .button,
+        #onoffdouble:checked ~ label .boxbtn:last-child .button {
             background: #e7e4de;
             min-width: 45px;
             min-height: 45px;
@@ -52,6 +56,7 @@
                 0 12px 9px -2px rgba(165, 145, 131, 0.4),
                 0 0 4px 0 rgba(49, 34, 22, 0.2);
         }
+
         .button > span {
             font-size: 0.7rem;
             color: rgba(49, 34, 22, 0.7);
@@ -59,6 +64,7 @@
             padding: 0 17px;
             cursor: pointer;
         }
+
         .boxbtn {
             padding: 4px;
             background: rgb(243, 240, 235);
@@ -72,6 +78,7 @@
             box-shadow: 0 -10px 10px -8px rgba(255, 255, 255, 0.9);
             margin: 3px;
         }
+
         .track {
             height: 102px;
             background: rgba(178, 152, 134, 0.2);
@@ -81,21 +88,94 @@
             align-items: flex-start;
             transform: translateX(0);
             transition: all 300ms;
-            box-shadow: inset 0 0 6px rgba(49, 34, 22, 0.4);
+            box-shadow: 
+                inset 0 0 6px rgba(49, 34, 22, 0.4),
+                inset 0 0 2px rgba(49, 34, 22, 0.2),
+                inset 0 4px 2px rgba(49, 34, 22, 0.2),
+                0 0 3px 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .boxbtn input[type=checkbox], .doublebtn input[type=checkbox] {
+            display: none;
+        }
+
+        .boxbtn .dragoble {
+            width: 28px;
+            line-height: 2px;
+            text-align: center;
+        }
+
+        .boxbtn .dragoble span {
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.9);
+            display: inline-block;
+            margin: 2px;
+            box-shadow: 
+                inset 0 -1px 3px -1px rgba(40, 34, 22, 0.7),
+                0 2px 0 rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        #onoff:checked ~ label .button,
+        #onoffdrag:checked ~ .track label .button,
+        .doublebtn label .boxbtn:last-child .button,
+        #onoffdouble:checked ~ label .boxbtn:first-child .button {
+            box-shadow: 
+                inset 0 4px 2px 0 rgba(49, 24, 22, 0.16),
+                inset 0 5px 3px 0 rgba(255, 255, 255, 0.8),
+                inset 0 -4.5px 3.5px 0 rgba(178, 152, 134, 0.4),
+                inset 0 -5px 3px -2px rgba(255, 255, 255, 0.4),
+
+                inset 8px 0 4px -2px rgba(255, 255, 255, 0.5),
+                inset -9px 0 3px -2px rgba(255, 255, 255, 0.3),
+
+                0 3px 2px -1px rgba(178, 152, 134, 0.7),
+                0 -4px 4px 0 rgba(49, 34, 22, 0.05);
+            ;
+        }
+
+        #onoffdrag:checked ~ .track {
+            background: rgba(238, 184, 23, 0.8);
+        }
+
+        #onoffdrag:checked ~ .track .button {
+            transform: translateY(calc(100% + 12px));
         }
     </style>
 </head>
 <body>
     <div class="boxbtn">
-        <div class="button">
-            <span>DEIXA O LIKE</span>
-        </div>
-    </div>
-    <div class="boxbtn">
-        <div class="track">
+        <input type="checkbox" name="onoff" id="onoff" />
+        <label for="onoff">
             <div class="button">
-                <span>DEIXA O LIKE</span>
+                <span>ПОСТАВЬ ЛАЙК</span>
             </div>
+        </label>
+    </div>
+
+    <div class="doublebtn">
+        <input type="checkbox" name="onoffdouble" id="onoffdouble" />
+        <label for="onoffdouble">
+            <div class="boxbtn">
+                <div class="button">
+                </div>
+            </div>
+            <div class="boxbtn">
+                <div class="button">
+                </div>
+            </div>
+        </label>
+    </div>
+
+    <div class="boxbtn">
+        <input type="checkbox" name="onoffdrag" id="onoffdrag" />
+        <div class="track">
+            <label for="onoffdrag">
+                <div class="button">
+                    <span></span>
+                </div>
+            </label>
         </div>
     </div>
 </body>
